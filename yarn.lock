@@ -886,10 +886,10 @@ js-sha3@0.8.0:
   resolved "https://registry.npmjs.org/js-sha3/-/js-sha3-0.8.0.tgz"
   integrity sha512-gF1cRrHhIzNfToc802P800N8PpXS+evLLXfsVpowqmAFR9uwbi89WvXg2QspOmXL8QL86J4T1EpFu+yUkwJY3Q==
 
-kalshi-typescript@^3.5.0:
-  version "3.8.0"
-  resolved "https://registry.npmjs.org/kalshi-typescript/-/kalshi-typescript-3.8.0.tgz"
-  integrity sha512-Czy14sScLboyt5Uwj54cfWquT/4e9bcFAivZrU0xwzAfjykRl+lEqTiP7Z10RKXo8GRot4UYlNw4arFVgaxutQ==
+kalshi-ts-sdk@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/kalshi-ts-sdk/-/kalshi-ts-sdk-2.1.0.tgz"
+  integrity sha512-guoqfR/ULUF3COSAc95fs6hwBJb99XJMBUchn3hvhtNTLn/IemnZZQaR50d6Ytxecsuqi+yUWF0q1ElWNSZwJQ==
   dependencies:
     axios "^1.6.1"
 

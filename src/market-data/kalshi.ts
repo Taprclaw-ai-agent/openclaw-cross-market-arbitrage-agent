@@ -1,13 +1,13 @@
 /**
  * Kalshi WebSocket market feed - connects to trade-api WS, subscribes to ticker channel,
- * and maps ticker messages to MarketEvent. Uses kalshi-typescript Configuration + same
+ * and maps ticker messages to MarketEvent. Uses kalshi-ts-sdk Configuration + same
  * RSA-PSS auth scheme as kalshi-trading-bot monitor-ws.ts.
  */
 import * as crypto from "node:crypto";
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import WebSocket from "ws";
-import { Configuration } from "kalshi-typescript";
+import { Configuration } from "kalshi-ts-sdk";
 import type { Logger } from "../logger.js";
 import type { BroadcastBus } from "../bus.js";
 import type { MarketEvent } from "../types.js";
@@ -68,7 +68,7 @@ function getWsUrl(config: Configuration): string {
   return base.replace(/\/v2\/?$/, "/ws/v2");
 }
 
-/** Build auth headers (RSA-PSS, same scheme as kalshi-typescript KalshiAuth / trading bot). */
+/** Build auth headers (RSA-PSS, same scheme as kalshi-ts-sdk KalshiAuth / trading bot). */
 function getWsAuthHeaders(config: Configuration): Record<string, string> {
   const apiKey = config.apiKey;
   const privateKey =
@@ -160,6 +160,7 @@ export function startKalshiFeed({
       }
       try {
         const parsed = JSON.parse(raw);
+        logger.info({ parsed }, "Kalshi WS message received");
         if (parsed.type === "subscribed") return;
         if (parsed.type === "error") {
           logger.warn({ msg: parsed.msg }, "Kalshi WS error");
@@ -168,6 +169,7 @@ export function startKalshiFeed({
         const event = mapToMarketEvent(parsed);
         if (event) {
           bus.publish(event);
+          logger.info({ event }, "Kalshi market event published");
         }
       } catch (error) {
         logger.error({ error }, "Failed to parse Kalshi payload");

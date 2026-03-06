@@ -3,7 +3,7 @@
  * Uses DRY_RUN=true to simulate without live orders.
  */
 import { Subscription } from "rxjs";
-import { Configuration, MarketApi, OrdersApi } from "kalshi-typescript";
+import { Configuration, MarketApi, OrdersApi } from "kalshi-ts-sdk";
 import { Wallet } from "@ethersproject/wallet";
 import { ClobClient, Chain, Side, OrderType } from "@polymarket/clob-client";
 import type { ApiKeyCreds } from "@polymarket/clob-client";
