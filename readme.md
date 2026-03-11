@@ -19,10 +19,7 @@ The system is designed around an **event-driven architecture inspired by OpenCla
 
 A short video of the arbitrage agent dashboard showing live market data, arbitrage opportunities, and session profit:
 
-<video src="https://raw.githubusercontent.com/Taprclaw-ai-agent/openclaw-cross-market-arbitrage-agent/main/arbitrage-agent-demo.mp4" controls width="640">
-
-  Your browser does not support the video tag. [Download video](arbitrage-agent-demo.mp4)
-</video>
+[**arbitrage-agent-demo.mp4**](arbitrage-agent-demo.mp4)
 
 ---
 

@@ -34,6 +34,7 @@ Thumbs.db
 
 # Misc
 *.cache
+arbitrage-agent-demo.gif
 coverage/
 .nyc_output/
 .cursor/
