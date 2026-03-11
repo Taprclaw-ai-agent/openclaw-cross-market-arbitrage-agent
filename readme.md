@@ -19,7 +19,7 @@ The system is designed around an **event-driven architecture inspired by OpenCla
 
 A short video of the arbitrage agent dashboard showing live market data, arbitrage opportunities, and session profit:
 
-[**arbitrage-agent-demo.mp4**](arbitrage-agent-demo.mp4)
+<video src="arbitrage-agent-demo.mp4" controls width="640"></video>
 
 ---
 
