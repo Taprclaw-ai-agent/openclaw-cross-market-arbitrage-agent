@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import dotenv from "dotenv";
+import '@vihat/bignum';
 import { parse } from "yaml";
 import { z } from "zod";
 
